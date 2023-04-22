@@ -5,73 +5,50 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Party Registration page</title>
-
 <link rel="stylesheet" href="AppData/css/style.css">
+</head>
 <style>
-body {
-	background-image: url(AppData/images/image5.jpeg);
+	body {
+	background-image: url('AppData/images/back.jpg');
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
 }
 </style>
-</head>
 <body>
-
-	<div class="navbar">
-		<div class="dropdown">
-			<button class="dropbtn">
-				All Data <i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="#">View All Voter</a> <a href="#">View All Candidate</a> <a
-					href="#">View All Party</a>
-			</div>
-		</div>
-		<a href="#news">News</a>
-		<div class="dropdown">
-			<button class="dropbtn">
-				Applications <i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-					     
-				<a href="partyRegistration.jsp">Party Registration</a> 
-				<a href="#">Voter Registration</a> 
-				<a href="candidateRegistration.jsp">Candidate Registration</a> 
-				<a href="#">Election Defeat</a>
-					
-			</div>
-		</div>
-	</div>
-
+<jsp:include page="header.jsp" />
+<div class="center">
 <h1>Party Registration Page</h1>
-	<table class="main">
-		
-		
+	<form class="main" action="PartyController" method="post">
+	<table>
 		<tr>
-			<td><label> Party Name: </label></td>
-			<td><input type="text" id="username" name="username"
-				placeholder="please enter your username"><br></td>
+			<td> Party Name: </td>
+			<td>
+				<input type="text" id="username" name="username" class="textStyle" placeholder="please enter your username">
+			</td>
 		</tr>
 		<tr>
-			<td><label>Party Symbol:</label></td>
+
+			<td>Party President Name :</td>
+			<td>
+				<input type="text" id="party president " name="president" class="textStyle" placeholder="Enter President Name">
+				
+			</td>
+		</tr>
+		<tr>
+			<td>Party Symbol:</td>
 			<td>
 				<input type="file" id="party symbol" name="username" placeholder="please upload party symbol">
 			</td>
 		</tr>
 		<tr>
-
-			<td><label>Party President Name :</label></td>
-			<td>
-				<input type="text" id="party president " name="president" placeholder="Enter President Name">
-				
+			<td colspan="2">
+				<button type="submit" class="btn">SAVE</button>
 			</td>
-		</tr>
-
-
+		</tr>		
 	</table>
-
-
+</form>
+</div>
 
 
 </body>

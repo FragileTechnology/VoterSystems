@@ -6,18 +6,17 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="AppData/css/style.css">
-
+</head>
 <style>
-body {
-	background-image: url(AppData/images/back.jpg);
-	opacity: 0.7;
+	body {
+	background-image: url('AppData/images/back.jpg');
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
 }
 </style>
-</head>
 <body>
+	<jsp:include page="header.jsp" />
 	<h1>Candidate Registration</h1>
 
 	<div class="center">

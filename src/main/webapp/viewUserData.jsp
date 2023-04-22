@@ -22,40 +22,17 @@
 </head>
 <link rel="stylesheet" href="AppData/css/style.css">
 <body>
-<div class="navbar">
-		<div class="dropdown">
-			<button class="dropbtn">
-				All Data <i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="#">View All Voter</a> 
-				<a href="viewUserData.jsp">View All User</a>
-				 <a href="viewPartyDetails.jsp">View All Party</a>
-					
-			</div>
-		</div>
-		<a href="#news">News</a>
-		<div class="dropdown">
-			<button class="dropbtn">
-				Applications <i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-					     
-				<a href="partyRegistration.jsp">Party Registration</a> 
-				<a href="#">Voter Registration</a> 
-				<a href="candidateRegistration.jsp">Candidate Registration</a> 
-				<a href="#">Election Defeat</a>
-					
-			</div>
-		</div>
-	</div>
-<table border=1px;>
+<jsp:include page="header.jsp" />
+<table class="TblCss" border="1px">
+<caption>All User Information</caption>
 <thead>
 	<tr>
 		<td>UserId</td>
 		<td>Name</td>
 		<td>Email_id</td>
 		<td>Contact</td>
+		<td></td>
+		<td></td>
 	</tr>
 </thead>
 <tbody>
@@ -71,7 +48,12 @@
 		<td><%=uEntity.getName() %></td>
 		<td><%=uEntity.getEmail() %></td>
 		<td><%=uEntity.getContact() %></td>
-	
+		<td align="center">
+	     	<button class="Updatebtn">Update</button>
+	    </td>
+	    <td align="center">
+	    	<button class="dltBtn">Delete</button>
+	    </td>
 	
 	
 	</tr>

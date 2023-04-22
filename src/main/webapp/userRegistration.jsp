@@ -36,7 +36,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 		if (username1 == "" || email1 == "" || contact == "" || password == ""
 				|| cpassword == "") {
-			alert("====");
 			event.preventDefault();
 			document.getElementById("warningMsg").innerHTML = "Please Enter valid data to proceed.";
 
@@ -60,42 +59,53 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 <body>
 
-	<h1>Register Yourself</h1>
+	
 
 	<div class="center">
 		<span id="successMsg"><%=successMessage != null ? successMessage : ""%></span>
 		<span id="successMsg"><%=errorMessage != null ? errorMessage : ""%></span>
 		<form action="UserRegistrationController" method="post">
 			<input type="hidden" name="docmd" id="docmd" value="createUser">
+			<h1>Register Yourself</h1>
 			<table>
-
 				<tr>
-					<td>Name : <input type="text" name="useName" id="useName"
-						value="" placeholder="Full Name">
+					<td>Name :</td>
+					<td> 
+						<input type="text" name="useName" id="useName" class="textStyle" value="" placeholder="Full Name">
 					</td>
 				</tr>
 				<tr>
-					<td>Email: <input type="text" name="useremail" id="useremail"
-						value="" placeholder="Email Address"></td>
-				</tr>
-				<tr>
-					<td>Contact: <input type="number" name="usercontact"
-						id="usercontact" value="" placeholder="Contact Number"
-						onKeyDown="if(this.value.length==10) return false;" />
+					<td>Email:</td>
+					<td> 
+						<input type="text" name="useremail" id="useremail" class="textStyle" value="" placeholder="Email Address">
 					</td>
 				</tr>
 				<tr>
-					<td>Password: <input type="password" name="userpassword"
-						id="userpassword" value="" placeholder="Password" minlength="8"></td>
+					<td>Contact: </td>
+					<td>
+						<input type="number" name="usercontact" id="usercontact" class="textStyle" value="" placeholder="Contact Number" onKeyDown="if(this.value.length==10) return false;" />
+					</td>
 				</tr>
 				<tr>
-					<td>Confirm: <input type="password" name="cpassword"
-						id="cpassword" value="" placeholder="Confirm Password"
-						minlength="8"></td>
+					<td>Password:</td>
+					<td> 
+						<input type="password" name="userpassword" id="userpassword" class="textStyle" value="" placeholder="Password" minlength="8">
+					</td>
+				</tr>
+				<tr>
+					<td>Confirm: </td>
+					<td>
+						<input type="password" name="cpassword" id="cpassword" class="textStyle" value="" placeholder="Confirm Password" minlength="8">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button type="type" class="btn" onclick="saveUserDetails()">SAVE</button>
+						<a href="login.jsp" class="AnchorBtn">Redirect to login</a>
+					</td>
 				</tr>
 			</table>
-			<button type="type" class="btn" onclick="saveUserDetails()">SAVE</button>
-			<a href="login.jsp" class="ReLogin">Redirect to login</a>
+			
 
 
 

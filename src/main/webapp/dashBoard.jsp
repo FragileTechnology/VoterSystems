@@ -4,38 +4,79 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>DashBoard</title>
 <link rel="stylesheet" href="AppData/css/style.css">
+
 </head>
 
-<body>
-	<div class="navbar">
-		<div class="dropdown">
-			<button class="dropbtn">
-				All Data <i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="#">View All Voter</a> 
-				<a href="viewUserData.jsp">View All User</a>
-				 <a href="viewPartyDetails.jsp">View All Party</a>
-					
-			</div>
-		</div>
-		<a href="#news">News</a>
-		<div class="dropdown">
-			<button class="dropbtn">
-				Applications <i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-					     
-				<a href="partyRegistration.jsp">Party Registration</a> 
-				<a href="#">Voter Registration</a> 
-				<a href="candidateRegistration.jsp">Candidate Registration</a> 
-				<a href="#">Election Defeat</a>
-					
-			</div>
-		</div>
-	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
+<body>
+	<jsp:include page="header.jsp" />
+	
+	<h1>Party Wise Voter Interest</h1>
+	
+	<table style="width: 100%;margin-top: 5%;">
+		<tr>
+			<td>
+					<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+			</td>
+			<td>
+					<canvas id="myPieChart" style="width:100%;max-width:600px"></canvas>
+			</td>
+		</tr>
+	</table>
+	
+	
 </body>
+<script>
+var xValues = ["Congress", "NCP", "Manase", "ShivSena", "BJP"];
+var yValues = [1995, 2000, 2005, 2010, 2015];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "PartWise Voting"
+    }
+  }
+});
+
+
+/*Pie Chart*/
+
+
+var xValues = ["Congress", "NCP", "Manase", "ShivSena", "BJP"];
+var yValues = [15, 20, 12, 8, 45];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myPieChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "PartWise Voting"
+    }
+  }
+});
+
+
+</script>
 </html>

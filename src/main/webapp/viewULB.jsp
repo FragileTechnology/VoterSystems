@@ -15,6 +15,7 @@ List electionTypeList = MSDefinitionDAO.getInstance().findByDefCategory("Electio
 
 </head>
 <body>
+	<jsp:include page="header.jsp" />
 	<!--To Show Total Count In Database-->
 	<b>Total Available Record : </b><%=electionTypeList.size()%>
 	<table border=1px;>

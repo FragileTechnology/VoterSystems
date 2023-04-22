@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="AppData/css/vstyle.css">
+<title>Voter Registration</title>
+<link rel="stylesheet" href="AppData/css/style.css">
 </head>
-
 <style>
 body {
 	background-image: url('AppData/images/back.jpg');
@@ -15,55 +14,75 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-  
-</style>
 
-<script>
-
-function validateForm()
-{
-	alert();
-	int num = document.getElementById("pincode").value;
-	
-	if(num != (/^[0-9]+$/))
-	{
-		alert();
-	}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
-
-</script>
-
+</style>
 <body>
-<div id="class">
+<jsp:include page="header.jsp" />
+<div class="twoSideForm">
+	<h1>Voter Application</h1>
 	<form action="VoterRegistrationController" method="post">
-	<input type="hidden" name="docmd" id="docmd" value="createVoter">
-	
+			<input type="hidden" name="docmd" id="docmd" value="createVoter">
 			<table>
-			
-		<tr> <td> Name : <input type="text" name="voterName" id="voterName" value="" placeholder="Full Name"> </td> </tr> 
-		<tr> <td> Email: <input type="text"name="voteremail" id="voteremail" value="" placeholder="Email Address"></td></tr>
-		<tr> <td> Contact: <input type="number"  name="votercontact" id="votercontact" value="" placeholder="Contact Number" onKeyDown="if(this.value.length==10) return false;" />
-		<tr> <td> Gender:
-		 <input type="radio" name="G"  value="Male" >Male 
-		 <input type="radio" name="G"  value="Female" >Female 
-		</td>
-		<tr> <td> Aadhar Number: <input type="number" name="aadhar" id="aadhar" placeholder="Aadhar Number" > </td> </tr>		
-		<tr> <td> DOB: <input type="date" name="dob" id="dob" value="" ></td></tr>
-		<tr> <td> State: <input type="text" > </td></tr>
-		<tr> <td> City: <input type="text" ></td> </tr>
-		<tr> <td> District: <input type="text" ></td> </tr>
-		<tr> <td> Taluka: <input type="text" ></td> </tr>
-		<tr> <td> Village: <input type="text"> </td> </tr>
-		<tr> <td> Postal Code: <input type="text" name="pincode" id="pincode" value="" placeholder="Postal Code" maxlength=6 ></td> <tr>
-		 </table>
-		 
-		<button type="submit" class="btn" onclick="validateForm()">SAVE</button>
+				<tr>
+			        <td> Name :</td> 
+			        <td><input type="text" name="voterName" id="voterName" class="textStyle" value="" placeholder="Full Name"> </td>
+			    	<td> Email:</td>
+			        <td> <input type="text" name="voteremail" id="voteremail" class="textStyle" value="" placeholder="Email Address"></td>
+			    </tr>
+			   
+			    <tr>
+			        <td> Contact: </td>
+			        <td>
+			        <input type="number" name="votercontact" id="votercontact" class="textStyle" value="" placeholder="Contact Number" onKeyDown="if(this.value.length==10) return false;" />
+			        </td>
+			         <td> Aadhar Number: </td>
+			        <td> <input type="number" name="aadhar" id="aadhar"  class="textStyle" placeholder="Aadhar Number"></td>
+			            
+			    </tr>
+			    <tr>
+			        <td>DOB:</td>
+			        <td>  <input type="date" name="dob" id="dob" class="textStyle" value=""></td>
+			    	 <td>State:</td>
+			        <td>  <input type="text" name="state" class="textStyle" id="state"> </td>
+			    </tr>
+			    
+			    <tr>
+			        <td>City: </td>
+			        <td> <input type="text" name="city" class="textStyle" id="city"></td>
+			    	<td>District: </td>
+			        <td> <input type="text" name="district" class="textStyle" id="distrcit"></td>
+			    </tr>
+		
+			    <tr>
+			        <td>Taluka:</td>
+			        <td>  <input type="text" name="taluka" class="textStyle" id="taluka"></td>
+			    	<td>Village:</td>
+			        <td>  <input type="text" name="village" class="textStyle" id="village"> </td>
+			    </tr>
+			    
+			    <tr>
+			        <td>Postal Code:</td>
+			        <td> 
+			        	 <input type="text" name="postalcode" id="postalcode" class="textStyle" value="" placeholder="Postal Code" maxlength=6>
+			        </td>
+			        <td> Gender:</td>
+			        <td>
+			            <input type="radio" name="G" value="Male">Male
+			            <input type="radio" name="G" value="Female">Female
+			        </td>  
+			        
+			    </tr>
+				 <tr>
+				 	<td colspan="4" align="center">
+				 		<button type="submit" class="btn">SAVE</button>
+				 	</td>
+				 </tr>	
+			</table>
 	</form>
-	
 	</div>
 </body>
 </html>

@@ -64,13 +64,22 @@ h1 {
 .center {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
 	margin-top: 10%;
-	margin-left: 25%;
-	width: 40%;
+	width: 50%;
+	padding: 5%;
+	margin-left:20%;
+	border-radius: 5px;
+}
+
+
+.twoSideForm {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+	margin-top: 5%;
+	width: 90%;
 	padding: 5%;
 	border-radius: 5px;
 }
 
-input[type=text] {
+.textStyle {
 	width: 500px;
 	border-radius: 5px;
 	padding: 12px 20px;
@@ -78,37 +87,48 @@ input[type=text] {
 	box-sizing: border-box;
 }
 
-input[type=email] {
-	border-radius: 5px;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
-}
 
-input[type=number] {
-	width: 500px;
-	border-radius: 5px;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
-}
-
-input[type=password] {
-	width: 500px;
-	border-radius: 5px;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
-}
 
 .btn {
 	border-radius: 10px;
 	border: none;
-	width: 500px;
+	width: 100px;
 	background-color: #0d58d1;
 	padding: 14px 20px;
 	margin: 8px 0;
 	color: white;
+}
+
+
+.Updatebtn {
+	border-radius: 10px;
+	border: none;
+	width: 100px;
+	background-color: #53bf49;
+	padding: 8px 15px;
+	margin: 8px 0;
+	color: white;
+}
+
+.dltBtn {
+	border-radius: 10px;
+	border: none;
+	width: 100px;
+	background-color: #c42d2d;
+	padding: 8px 15px;
+	margin: 8px 0;
+	color: white;
+}
+
+.AnchorBtn {
+	border-radius: 10px;
+	border: none;
+	width: 100px;
+	background-color: #0d58d1;
+	padding: 14px 20px;
+	margin: 8px 0;
+	color: white;
+	text-decoration:none;
 }
 
 .btn:hover {
@@ -129,90 +149,14 @@ input[type=password] {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
 }
 
-input[type=email1] {
-	font-weight: bold;
-	width: 367px;
-	border-radius: 5px;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
+/*NAVBAR CSS*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-input[type=password1] {
-	font-weight: bold;
-	width: 367px;
-	border-radius: 5px;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
-}
-
-button[type=submit1] {
-	border-radius: 10px;
-	border: none;
-	width: 367px;
-	background-color: #0d58d1;
-	padding: 14px 20px;
-	margin: 8px 0;
-	color: white;
-	font-size: 19px;
-}
-
-button[type=submit2] {
-	border-radius: 10px;
-	border: none;
-	width: 367px;
-	background-color: #0d58d1;
-	padding: 14px 20px;
-	margin: 8px 0;
-	color: white;
-	font-size: 19px;
-}
-
-.form_btn1:hover {
-	border-radius: 10px;
-    border: none;
-    width: 500px;
-    background-color: #0d58d1;
-    padding: 14px 20px;
-    margin: 8px 0;
-    color: white;
-}
-
-
-.fp1 {
-	margin-left: 130px;
-}
-
-.u1 {
-	font-weight:lighter;
-}
-
-.fp2 {
-	margin-left: 105px;
-}
-
-.ReLogin{
-	margin-left:195px;
-}
-
-.form_btnn{
-	border-radius: 10px;
-	border: none;
-	width: 367px;
-	background-color: #0d58d1;
-	padding: 14px 20px;
-	margin: 8px 0;
-	color: white;
-	font-size: 19px;
-}
-
-/*DashBoard*/
-
 
 .navbar {
   overflow: hidden;
-   background: linear-gradient(to bottom, #99ff33 2%, #ff9900 99%);
+  background: linear-gradient(to bottom, #4d8aeb 2%, #4d8aeb 99%);
 }
 
 .navbar a {
@@ -270,26 +214,30 @@ button[type=submit2] {
   display: block;
 }
 
-/*Party Registration*/
-.main{ 
-  box-shadow:0 5px 10px rgb(0, 0, 0);	
-  margin-top:2%;
-  margin-left:35%;
-  width: 40%;
-  padding:5%;
-  border-radius: 3px;
-  background-color:light cream;
+/* HTML Style */
+
+.TblCss {
+    border-collapse: collapse;
+    width:100%;
+    border: 1px solid black;
+    margin-top: 5%;
 }
 
-input[type=text]{
-	width:300px;
-	border-radius: 5px;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing : border-box;
+thead{
+	background-color: #85aae6;
+	color:white;
+	text-align:center;
 }
 
-/*candidate registration*/
+.TblCss tr:nth-child(even) {
+    background-color: #d9c0a7;
+}
 
-
+caption {
+  display: table-caption;
+  text-align: center;
+  font-size: 25px;
+  font-style: bold;
+  font-family: Sans-serif;
+}
 
