@@ -1,0 +1,295 @@
+/* Voter System CSS*/
+header {
+	margin-top: 11%;
+	text-align: center;
+}
+
+.fpdiv {
+	border-radius: 1000px;
+	box-shadow: 0px 5px 50px;
+	text-align: center;
+	height: 100%;
+	width: 20%;
+	margin-top: 5%;
+	margin-left: 33%;
+	margin-right: 20%;
+	border: 8px solid #0d58d1;
+	padding: 5%;
+}
+
+.btn1 {
+	color: white;
+	border-radius: 25px;
+	width: 200px;
+	padding: 25px 8px;
+	margin-left: 24px;
+	background-color: #0d58d1;
+	font-size: 130%;
+}
+
+button:hover {
+	background-color: #4d8aeb;
+}
+
+.header {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	width: 10%;
+	background-color: #78a4eb;
+}
+
+li a {
+	display: block;
+	color: #02024f;
+}
+
+li a:hover {
+	background-color: red;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Dashboard CSS*/
+.heading {
+	background-color: red;
+}
+
+/*userRegistration*/
+h1 {
+	text-align: center;
+}
+
+.center {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+	margin-top: 10%;
+	margin-left: 25%;
+	width: 40%;
+	padding: 5%;
+	border-radius: 5px;
+}
+
+input[type=text] {
+	width: 500px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+input[type=email] {
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+input[type=number] {
+	width: 500px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+input[type=password] {
+	width: 500px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+.btn {
+	border-radius: 10px;
+	border: none;
+	width: 500px;
+	background-color: #0d58d1;
+	padding: 14px 20px;
+	margin: 8px 0;
+	color: white;
+}
+
+.btn:hover {
+	background-color: #4d8aeb;
+}
+
+/*login*/
+.log{
+	text-align:center;
+}
+
+.login{
+	border:1px;
+	margin-top: 10%;
+	margin-left: 30%;
+	margin-right: 30%;
+	padding: 5%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+}
+
+input[type=email1] {
+	font-weight: bold;
+	width: 367px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+input[type=password1] {
+	font-weight: bold;
+	width: 367px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+button[type=submit1] {
+	border-radius: 10px;
+	border: none;
+	width: 367px;
+	background-color: #0d58d1;
+	padding: 14px 20px;
+	margin: 8px 0;
+	color: white;
+	font-size: 19px;
+}
+
+button[type=submit2] {
+	border-radius: 10px;
+	border: none;
+	width: 367px;
+	background-color: #0d58d1;
+	padding: 14px 20px;
+	margin: 8px 0;
+	color: white;
+	font-size: 19px;
+}
+
+.form_btn1:hover {
+	border-radius: 10px;
+    border: none;
+    width: 500px;
+    background-color: #0d58d1;
+    padding: 14px 20px;
+    margin: 8px 0;
+    color: white;
+}
+
+
+.fp1 {
+	margin-left: 130px;
+}
+
+.u1 {
+	font-weight:lighter;
+}
+
+.fp2 {
+	margin-left: 105px;
+}
+
+.ReLogin{
+	margin-left:195px;
+}
+
+.form_btnn{
+	border-radius: 10px;
+	border: none;
+	width: 367px;
+	background-color: #0d58d1;
+	padding: 14px 20px;
+	margin: 8px 0;
+	color: white;
+	font-size: 19px;
+}
+
+/*DashBoard*/
+
+
+.navbar {
+  overflow: hidden;
+   background: linear-gradient(to bottom, #99ff33 2%, #ff9900 99%);
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Party Registration*/
+.main{ 
+  box-shadow:0 5px 10px rgb(0, 0, 0);	
+  margin-top:2%;
+  margin-left:35%;
+  width: 40%;
+  padding:5%;
+  border-radius: 3px;
+  background-color:light cream;
+}
+
+input[type=text]{
+	width:300px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing : border-box;
+}
+
+/*candidate registration*/
+
+
+
