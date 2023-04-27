@@ -29,7 +29,7 @@
 					<td><input type="text" name="name" class="textStyle" id="" placeholder="Enter Name"></td>
 					<td>Election Program</td>
 					<td><select name="electionProgram" id="" class="textStyle">
-							<option value="">A</option>
+							<option value="">AAA</option>
 							<option value="">B</option>
 							<option value="">B</option>
 							<option value="">C</option>
