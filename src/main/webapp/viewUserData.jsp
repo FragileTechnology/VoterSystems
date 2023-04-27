@@ -18,7 +18,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>User Data</title>
 </head>
 <link rel="stylesheet" href="AppData/css/style.css">
 <body>

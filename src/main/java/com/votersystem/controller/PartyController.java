@@ -42,8 +42,7 @@ public class PartyController extends HttpServlet {
 		String partyName = request.getParameter("partyName");
 		String presidentName =  request.getParameter("partyPresident");
 		String symboll = request.getParameter("partySymbol");
-		System.out.println("partyName===>"+partyName+" presidentName==>"+presidentName+" symboll==>0"+symboll);
-		
+		String nextPage="";
 		PartyEntity partyEntity = new PartyEntity();
 		partyEntity.setPartyname(partyName);
 		partyEntity.setPresidentname(presidentName);
@@ -52,7 +51,7 @@ public class PartyController extends HttpServlet {
 		PartyDAO dao = new PartyDAOImpl();
 		try {
 			 String result = dao.createParty(partyEntity);
-			 System.out.println("result===============>"+result);
+			 nextPage = "partyRegistration.jsp";
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

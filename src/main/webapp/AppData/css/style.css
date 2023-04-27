@@ -63,7 +63,16 @@ h1 {
 
 .center {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
-	margin-top: 10%;
+	margin-top: 5%;
+	width: 50%;
+	padding: 5%;
+	margin-left:20%;
+	border-radius: 5px;
+}
+
+.centerv {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+	margin-top: 0%;
 	width: 50%;
 	padding: 5%;
 	margin-left:20%;
@@ -105,6 +114,16 @@ h1 {
 	border: none;
 	width: 100px;
 	background-color: #53bf49;
+	padding: 8px 15px;
+	margin: 8px 0;
+	color: white;
+}
+
+.VoteBtn {
+	border-radius: 10px;
+	border: none;
+	width: 100px;
+	background-color: #eb5b34;
 	padding: 8px 15px;
 	margin: 8px 0;
 	color: white;
