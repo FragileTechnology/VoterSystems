@@ -28,7 +28,7 @@ body {
 			<th>Make Vote</th>
 		</tr>
 		<tr>
-			<th>BJP</td>
+			<th>BJP Party</td>
 			<th>Sarthak Mahajan</td>
 			<td align="center">
 				<img src="AppData/images/bjp.png" height="100px" width="100px">
