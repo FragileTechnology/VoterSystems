@@ -26,6 +26,20 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 </style>
 <script>
+	function myFunctin()
+	{
+		var username1 = document.getElementById("useName").value;
+		var email1 = document.getElementById("useremail").value;
+		var contact = document.getElementById("usercontact").value;
+		var password = document.getElementById("userpassword").value;
+		var cpassword = document.getElementById("cpassword").value;
+		
+		if ()
+		{
+			
+		}
+		
+	}
 	function saveUserDetails() {
 
 		var username1 = document.getElementById("useName").value;
@@ -34,17 +48,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 		var password = document.getElementById("userpassword").value;
 		var cpassword = document.getElementById("cpassword").value;
 
-		if (username1 == "" || email1 == "" || contact == "" || password == ""
-				|| cpassword == "") {
+		if (username1 == "" || cpassword == "" || password == "" || contact == "" || email1 == "") 
+		{
 			event.preventDefault();
-			document.getElementById("warningMsg").innerHTML = "Please Enter valid data to proceed.";
-
-		} else {
+			alert("Enter valid input.");
+		}  
+		else {
 			if (validatePassWord(password, cpassword)) {
 				alert("We are good to submit the form.");
 			}
 		}
 	}
+	
 	function validatePassWord(pwd, cpwd) {
 		var isValidPwd = true;
 		if (pwd != cpwd) {
@@ -55,13 +70,15 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 		}
 		return isValidPwd;
 	}
+	
 </script>
 
 <body>
 
-	
+
 
 	<div class="center">
+
 		<span id="successMsg"><%=successMessage != null ? successMessage : ""%></span>
 		<span id="successMsg"><%=errorMessage != null ? errorMessage : ""%></span>
 		<form action="UserRegistrationController" method="post">
@@ -70,42 +87,39 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 			<table>
 				<tr>
 					<td>Name :</td>
-					<td> 
-						<input type="text" name="useName" id="useName" class="textStyle" value="" placeholder="Full Name">
-					</td>
+					<td><input type="text" name="useName" id="useName"
+						class="textStyle" value="" placeholder="Full Name"></td>
 				</tr>
 				<tr>
 					<td>Email:</td>
-					<td> 
-						<input type="text" name="useremail" id="useremail" class="textStyle" value="" placeholder="Email Address">
-					</td>
+					<td><input type="text" name="useremail" id="useremail"
+						class="textStyle" value="" placeholder="Email Address"></td>
 				</tr>
 				<tr>
-					<td>Contact: </td>
-					<td>
-						<input type="number" name="usercontact" id="usercontact" class="textStyle" value="" placeholder="Contact Number" onKeyDown="if(this.value.length==10) return false;" />
-					</td>
+					<td>Contact:</td>
+					<td><input type="number" name="usercontact" id="usercontact"
+						class="textStyle" value="" placeholder="Contact Number"
+						onKeyDown="if(this.value.length==10) return false;" /></td>
 				</tr>
 				<tr>
 					<td>Password:</td>
-					<td> 
-						<input type="password" name="userpassword" id="userpassword" class="textStyle" value="" placeholder="Password" minlength="8">
-					</td>
+					<td><input type="password" name="userpassword"
+						id="userpassword" class="textStyle" value=""
+						placeholder="Password" minlength="8"></td>
 				</tr>
 				<tr>
-					<td>Confirm: </td>
-					<td>
-						<input type="password" name="cpassword" id="cpassword" class="textStyle" value="" placeholder="Confirm Password" minlength="8">
-					</td>
+					<td>Confirm:</td>
+					<td><input type="password" name="cpassword" id="cpassword"
+						class="textStyle" value="" placeholder="Confirm Password"
+						minlength="8"></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center">
+					<td colspan="2" align="center"><span id="warningMsg"></span>
 						<button type="type" class="btn" onclick="saveUserDetails()">SAVE</button>
-						<a href="login.jsp" class="AnchorBtn">Redirect to login</a>
-					</td>
+						<a href="login.jsp" class="AnchorBtn">Redirect to login</a></td>
 				</tr>
 			</table>
-			
+
 
 
 

@@ -20,6 +20,35 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 	margin: 0;
 }
 </style>
+
+<script>
+	function saveVoterDetails ()
+	{
+		
+		var vname = document.getElementById("voterName").value;
+		var vemail = document.getElementById("voteremail").value;
+		var vcontact = document.getElementById("votercontact").value;
+		var vaadhar = document.getElementById("aadhar").value;
+		var vdob = document.getElementById("dob").value;
+		var vstate = document.getElementById("state").value;
+		var vcity = document.getElementById("city").value;
+		var vdistrict = document.getElementById("district").value;
+		var vtaluka = document.getElementById("taluka").value;
+		var vvillage = document.getElementById("village").value;
+		var vpostalcode = document.getElementById("postalcode").value;
+		var vgender = document.getElementById("voterName").value;
+		
+	}
+	if (vname == "" || vemail == "" || vcontact  == "" || vaadhar == "" || vdob == "" || vstate == "" || vcity == "" || vdistrict == "" || vtaluka == "" || vvillage == "" || vpostalcode == "" || vgender == "")
+	{
+		event.preventDefault();
+		alert("Please enter valid input, to proceede");
+	}
+	else
+	{
+		alert("Form Successfull Submitted!!!");
+	}
+</script>
 <body>
 <jsp:include page="header.jsp" />
 <div class="twoSideForm">
@@ -71,14 +100,14 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 			        </td>
 			        <td> Gender:</td>
 			        <td>
-			            <input type="radio" name="G" value="Male">Male
-			            <input type="radio" name="G" value="Female">Female
+			            <input type="radio" name="G" id="male" value="Male">Male
+			            <input type="radio" name="G" id="female" value="Female">Female
 			        </td>  
 			        
 			    </tr>
 				 <tr>
 				 	<td colspan="4" align="center">
-				 		<button type="submit" class="btn">SAVE</button>
+				 		<button type="type" class="btn" onclick="saveVoterDetails()">SAVE</button>
 				 	</td>
 				 </tr>	
 			</table>
